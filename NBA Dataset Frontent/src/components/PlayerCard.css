@@ -1,0 +1,107 @@
+.player-card {
+    background-color: #427ba7;
+    text-align: left;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    height: 40rem;
+    padding: .5rem;
+    width: 20rem;
+    margin: 2rem;
+}
+
+.player-name {
+    background-color: rgba(35, 76, 106, 0.6);
+    margin: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    color: #fff;
+}
+
+.player-info{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+h1 {
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: .5rem;
+    padding: .5rem;
+}
+
+.player-image{
+    margin-left: .5rem;
+}
+
+.player-card img {
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.image-line{
+    height: .3rem;
+    background-color: rgba(35, 76, 106, 0.6);
+    margin: 0;
+    width: 80%;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.player-stat-btns{
+    display: flex;
+    flex-direction: row;
+    margin: .5rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    line-height: 1;
+    outline: none;
+}
+
+.pts-btn {
+    background-color: rgba(35, 76, 106, 0.6);
+    color: white;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: .5rem;
+    border-bottom-left-radius: 0px;
+    width: 33%;
+    height: 2rem;
+}
+
+.ast-btn {
+    background-color: rgba(35, 76, 106, 0.6);
+    color: rgb(255, 255, 255);
+    width: 33%;
+    height: 2rem;
+    border-radius: 0px;
+}
+
+.reb-btn {
+    background-color: rgba(35, 76, 106, 0.6);
+    color: white;
+    width: 33%;
+    height: 2rem;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: .5rem;
+}
+
+.btn:hover {
+    background-color: #1B3C53;
+}
+

@@ -1,3 +1,5 @@
+import './PlayerCard.css';
+
 function PlayerCard({ player }) {
     return(
         <div className="player-card">
@@ -6,14 +8,19 @@ function PlayerCard({ player }) {
             </div>
             <div className="player-image">
                 <img src={player.image} alt={player.name} />
+                <div className='image-line'></div>
             </div>
-            <div className="player-stats">
+            <div className="player-game-stats">
 
                 {/* // However I get the stats section will be here  */}
+                the one
 
-                <button className="pts-btn">PTS</button>
-                <button className="ast-btn">AST</button>
-                <button className="reb-btn">REB</button>
+
+            </div>
+            <div className='player-stat-btns'>
+                <button className="btn pts-btn">PTS</button>
+                <button className="btn ast-btn">AST</button>
+                <button className="btn reb-btn">REB</button>
             </div>
         </div>
     )
