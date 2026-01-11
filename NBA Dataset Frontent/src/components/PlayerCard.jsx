@@ -13,7 +13,7 @@ function PlayerCard({ player }) {
             <div className="player-game-stats">
 
                 {/* // However I get the stats section will be here  */}
-                the one
+                Stats will go here
 
 
             </div>

@@ -1,3 +1,5 @@
+/* Player Card Styles */
+
 .player-card {
     background-color: #427ba7;
     text-align: left;
@@ -6,8 +8,12 @@
     height: 40rem;
     padding: .5rem;
     width: 20rem;
-    margin: 2rem;
+    transform: scale(.8);
+    transform-origin: center;
 }
+
+/* ------- PLAYER NAME SECTION ----------- */
+
 
 .player-name {
     background-color: rgba(35, 76, 106, 0.6);
@@ -31,6 +37,8 @@ h1 {
     padding: .5rem;
 }
 
+/* ------- PLAYER IMAGE SECTION ----------- */
+
 .player-image{
     margin-left: .5rem;
 }
@@ -50,6 +58,8 @@ h1 {
     border-top-right-radius: .5rem;
     border-bottom-left-radius: .5rem;
 }
+
+/* ------- PLAYER BUTTON SECTION ----------- */
 
 .player-stat-btns{
     display: flex;
@@ -76,8 +86,8 @@ h1 {
     color: white;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
     border-bottom-left-radius: .5rem;
-    border-bottom-left-radius: 0px;
     width: 33%;
     height: 2rem;
 }
@@ -105,3 +115,15 @@ h1 {
     background-color: #1B3C53;
 }
 
+
+/* ------- PLAYER STATS SECTION ----------- */
+.player-game-stats {
+    margin: .5rem;
+    background-color: rgba(35, 76, 106, 0.6);
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    color: #fff;
+    height: 17rem;
+    padding: .5rem;
+    overflow-y: auto;
+}
