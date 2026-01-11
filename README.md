@@ -17,4 +17,4 @@
     * Originally got inspiration for images from StatMuse.com
 - Inspiration for the player information visualization from Fanduel.com
 
-<img src = "Player Card Mockup.png" width = "400" height = "500">
+    <img src = "Player Card Mockup.png" width = "400" height = "500">
