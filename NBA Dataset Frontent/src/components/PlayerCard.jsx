@@ -23,6 +23,7 @@ function PlayerCard({ player }) {
                 <button className="btn reb-btn">REB</button>
             </div>
         </div>
+
     )
 }
 
