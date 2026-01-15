@@ -117,13 +117,18 @@ h1 {
 
 
 /* ------- PLAYER STATS SECTION ----------- */
-.player-game-stats {
-    margin: .5rem;
-    background-color: rgba(35, 76, 106, 0.6);
-    border-top-right-radius: .5rem;
-    border-bottom-left-radius: .5rem;
-    color: #fff;
-    height: 17rem;
-    padding: .5rem;
-    overflow-y: auto;
+.graph {
+  height: 275px;
+  position: relative;
+  border-bottom: 2px solid rgba(35, 76, 106, 0.6);
 }
+
+.bar {
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  background: #FF8484;
+  height: var(--height);
+}
+
+

@@ -39,6 +39,14 @@ function App() {
   const[players, setPlayers] = useState([])
   const[dataIsLoaded, setDataIsLoaded] = useState(false)
 
+  const player = {
+    name: "Stephen Curry",
+    image: StephCurry,
+    pts: [10, 5, 14, 21, 28],
+    ast: [3, 6, 8, 1, 12],
+    reb: [4, 6, 14, 13, 1]
+  }
+
   useEffect(() => {
     fetch('http://localhost:5000/data')
       .then((response) => response.json())
@@ -52,7 +60,7 @@ function App() {
 
   
   if (!dataIsLoaded) {
-    return <PlayerCard player ={{ name: "Anonymous", image: Placeholder }} />
+    return <PlayerCard player ={{ player }} />
   }
 
   return (
