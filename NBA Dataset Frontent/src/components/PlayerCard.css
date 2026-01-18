@@ -54,7 +54,7 @@ h1 {
     height: .3rem;
     background-color: rgba(35, 76, 106, 0.6);
     margin: 0;
-    width: 80%;
+    width: 83%;
     border-top-right-radius: .5rem;
     border-bottom-left-radius: .5rem;
 }
@@ -71,8 +71,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Instrument Sans", sans-serif;
     font-size: 1rem;
     font-weight: 400;
+    color: white;
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
@@ -114,21 +116,131 @@ h1 {
 .btn:hover {
     background-color: #1B3C53;
 }
+.btn.active {
+    background-color: #b4cfe3;
+}
 
 
 /* ------- PLAYER STATS SECTION ----------- */
-.graph {
-  height: 275px;
-  position: relative;
-  border-bottom: 2px solid rgba(35, 76, 106, 0.6);
+
+.graph-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: .1rem;
+    justify-content: left ;
+    height: 16rem;
+    margin-bottom: .5rem;
+    padding-bottom: 2rem;
+}
+.chart {
+    display: table;
+    height: 80%;
+    width: 80%;
+    padding: 0;
+    position: relative;
+}
+
+.chart li {
+    position: relative;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 10rem;
+    padding: 0 0.4rem;
+}
+
+.avg-line {
+    position: absolute;
+    left: 0;
+    right: -1rem;
+    bottom: var(--avg);
+    height: .1875rem;
+    background: rgba(237, 74, 74, 0.9);
+    z-index: 0;
+}
+
+.avg-label {
+    position: absolute;
+    right: -3rem;
+    top: -.85rem;
+    padding: 4px 8px;
+    background: rgba(237, 74, 74, 0.9);
+    font-size: .8rem;
+    font-weight: 400;
+    color: #ffffff;
+    border-radius: 4px;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.bar::before {
+    content: attr(title);
+    position: absolute;
+    top: .3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #404040;
+    white-space: nowrap;
+}
+.bar.bar-short::before {
+    content: attr(title);
+    top: -1.5rem;
+    color: #404040;
 }
 
 .bar {
-  position: absolute;
-  bottom: 0;
-  width: 30px;
-  background: #FF8484;
-  height: var(--height);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(122, 255, 110);
+    animation: draw 1s ease-in-out;
+    color: black;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    z-index: 1;
+}
+.bar.above-avg {
+  background: rgb(122, 255, 110);
+}
+.bar.below-avg {
+  background: rgb(174, 174, 174);
 }
 
+
+.graph-line {
+    position: absolute;
+    left: 0;
+    right: -1.3rem;
+    bottom: -.35rem;
+    z-index: 2;
+    height: .3rem;
+    background-color: rgba(35, 76, 106, 0.6);
+    margin: 0;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+
+.bar-label {
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Instrument Sans", sans-serif;
+    font-size: .8rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+/* Transitions the bars starting at 0pct height */
+@keyframes draw {
+    from { height: 0; }
+}
 

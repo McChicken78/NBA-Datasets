@@ -43,8 +43,8 @@ function App() {
     name: "Stephen Curry",
     image: StephCurry,
     pts: [10, 5, 14, 21, 28],
-    ast: [3, 6, 8, 1, 12],
-    reb: [4, 6, 14, 13, 1]
+    ast: [3, 6, 8, 2, 12],
+    reb: [4, 6, 14, 13, 0]
   }
 
   useEffect(() => {
@@ -56,16 +56,16 @@ function App() {
       })
   }, [])
 
-  console.log(players)
+  console.log(player)
 
   
   if (!dataIsLoaded) {
-    return <PlayerCard player ={{ player }} />
+    return <PlayerCard player ={ player } />
   }
 
   return (
     <>
-      <PlayerCard player ={{ name: "Steph Curry", image: StephCurry }} />
+      <PlayerCard player ={ player } />
       <div>
         <h2>Player Data loaded</h2>
       </div>
