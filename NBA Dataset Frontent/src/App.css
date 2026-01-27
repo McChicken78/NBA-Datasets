@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .player-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .player-grid {
+    grid-template-columns: 1fr;
+  }
+}

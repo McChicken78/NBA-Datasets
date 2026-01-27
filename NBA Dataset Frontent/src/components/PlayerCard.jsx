@@ -2,15 +2,15 @@ import './PlayerCard.css';
 import { useState } from 'react';
 
 
-function PlayerCard({ player }) {
+function PlayerCard({ player, img }) {
 
-    const [stat, setStat] = useState("pts")
-    console.log(player?.pts)
+    const [stat, setStat] = useState("PTS")
+    console.log(player?.PTS)
 
     if(!player){return <div>Loading... 1</div>}
-    if(!player.pts){return <div>Loading...</div>}
+    if(!player.Games){return <div>Loading...</div>}
 
-    const data = player[stat]
+    const data = player.Games.map(game => game[stat])
     // Get the nearest 5th for max value and to graph height
     const max = Math.ceil(Math.max(...data) / 5) * 5;
     const average = data.reduce((a, b) => a + b, 0) / data.length
@@ -19,10 +19,10 @@ function PlayerCard({ player }) {
     return(
         <div className="player-card">
             <div className="player-name">
-                <h1>{player.name}</h1>
+                <h1>{player.Player_Name}</h1>
             </div>
             <div className="player-image">
-                <img src={player.image} alt={player.name} />
+                <img src={img} alt={player.name} />
                 <div className='image-line'></div>
             </div>
 
@@ -60,9 +60,9 @@ function PlayerCard({ player }) {
 
 
             <div className='player-stat-btns'>
-                <button onClick = {() => setStat("pts")} className={`btn pts-btn ${stat === "pts" ? "active" : ""}`}>PTS</button>
-                <button onClick = {() => setStat("ast")} className={`btn ast-btn ${stat === "ast" ? "active" : ""}`}>AST</button>
-                <button onClick = {() => setStat("reb")} className={`btn reb-btn ${stat === "reb" ? "active" : ""}`}>REB</button>
+                <button onClick = {() => setStat("PTS")} className={`btn pts-btn ${stat === "PTS" ? "active" : ""}`}>PTS</button>
+                <button onClick = {() => setStat("AST")} className={`btn ast-btn ${stat === "AST" ? "active" : ""}`}>AST</button>
+                <button onClick = {() => setStat("TRB")} className={`btn reb-btn ${stat === "TRB" ? "active" : ""}`}>REB</button>
             </div>
         </div>
     )

@@ -56,7 +56,7 @@ function App() {
       })
   }, [])
 
-  console.log(player)
+  console.log(players)
 
   
   if (!dataIsLoaded) {
@@ -64,12 +64,9 @@ function App() {
   }
 
   return (
-    <>
-      <PlayerCard player ={ player } />
-      <div>
-        <h2>Player Data loaded</h2>
-      </div>
-    </>
+    <div className='players-grid'>
+      {players.map(player => <PlayerCard player ={ player } img={Placeholder} />)}
+    </div>
   )
 }
 
