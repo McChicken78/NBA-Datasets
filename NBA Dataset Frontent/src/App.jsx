@@ -1,8 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react'
 import PlayerCard from './components/PlayerCard.jsx'
-import StephCurry from './assets/StephCurryAnimated.png'
-import Placeholder from './assets/Placeholder.png'
 import playerStats from '../../data/player_stats.json';
 
 // async: The function can pause and resume
@@ -39,13 +37,14 @@ function App() {
   const[players, setPlayers] = useState([])
   const[dataIsLoaded, setDataIsLoaded] = useState(false)
 
-  const player = {
-    name: "Stephen Curry",
-    image: StephCurry,
-    pts: [10, 5, 14, 21, 28],
-    ast: [3, 6, 8, 2, 12],
-    reb: [4, 6, 14, 13, 0]
-  }
+  // ---- For testing without backend ----
+  // const player = {
+  //   name: "Stephen Curry",
+  //   image: StephCurry,
+  //   pts: [10, 5, 14, 21, 28],
+  //   ast: [3, 6, 8, 2, 12],
+  //   reb: [4, 6, 14, 13, 0]
+  // }
 
   useEffect(() => {
     fetch('http://localhost:5000/data')
@@ -56,17 +55,24 @@ function App() {
       })
   }, [])
 
-  console.log(players)
+  players.map(player => console.log(`./assets/${player.Player_Name.replace(/\s+/g, "")}Animated.png`))
 
-  
-  if (!dataIsLoaded) {
-    return <PlayerCard player ={ player } />
-  }
 
   return (
-    <div className='players-grid'>
-      {players.map(player => <PlayerCard player ={ player } img={Placeholder} />)}
+    <>
+    <div className='app-header'>
+      <div className='header-line'></div>
+      <h1>NBA Player Stats Dashboard</h1>
+      <p>This app is intended to make finding recent player trends easier. 
+        It has been created using a combination of programming languages incluing Python and JupyterNotebook for the backend and React-Vite/Javascript for the frontend.</p>
+      <div className='header-line'></div>
     </div>
+    <div className='players-grid'>
+      {players.map(player => <PlayerCard key={player.Player_Name} player ={ player } img={ `./assets/${player.Player_Name.replace(/\s+/g, "")}Animated.png` } />)}
+    </div>
+    </>
+
+    
   )
 }
 

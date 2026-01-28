@@ -13,7 +13,7 @@ function PlayerCard({ player, img }) {
     const data = player.Games.map(game => game[stat])
     // Get the nearest 5th for max value and to graph height
     const max = Math.ceil(Math.max(...data) / 5) * 5;
-    const average = data.reduce((a, b) => a + b, 0) / data.length
+    const average = (data.reduce((a, b) => a + b, 0) / data.length).toFixed(1)
     const averagePct = (average / max) * 100 
 
     return(
@@ -36,13 +36,13 @@ function PlayerCard({ player, img }) {
                 <ul key = {stat} className="chart" style={{ "--avg": `${averagePct}%` }}>
                     <div className='graph-line'></div>
                     <div className='avg-line'>
-                        <div className='avg-label'>Avg: {Math.round(average)}</div>
+                        <div className='avg-label'>Avg: { average }</div>
                     </div>     
 
                     {data.map((value, index) => {
                     const percent = (value / max) * 100
                     console.log(averagePct * max / 100)
-                    const barShort = percent < 10
+                    const barShort = percent < 15
 
                     return (
                         <li key={index}>
@@ -51,7 +51,11 @@ function PlayerCard({ player, img }) {
                             style={{ height: `${percent}%` }}
                             title={value}
                         />
-                        <div className="bar-label">vs LAL</div>
+                        <div className="bar-label">
+                            <span className="vs">vs</span>
+                            <span className="opp">{player.Games[index]?.Opp}</span>
+                            <span className="date">{formatDate(player.Games[index]?.Date)}</span>
+                            </div>
                         </li>
                     )
                     })}
@@ -67,5 +71,11 @@ function PlayerCard({ player, img }) {
         </div>
     )
 }
+
+function formatDate(oldDate){
+    const newDate = new Date(oldDate)
+    if(!isNaN(newDate.getTime())) {
+        return newDate.getMonth() + 1 + '/' + newDate.getDate()
+}}
 
 export default PlayerCard;

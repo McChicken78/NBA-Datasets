@@ -1,14 +1,14 @@
 /* Player Card Styles */
 
 .player-card {
-    background-color: #427ba7;
+    background: linear-gradient(135deg, #306186, rgba(118, 166, 203, .7));
     text-align: left;
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-    height: 40rem;
+    height: 42rem;
     padding: .5rem;
     width: 100%;
-    transform: scale(.8);
+    transform: scale(.86);
     transform-origin: center;
 }
 
@@ -230,15 +230,32 @@ h1 {
 
 .bar-label {
     position: absolute;
-    bottom: -3rem;
+    bottom: -3.5rem;
     left: 50%;
     transform: translateX(-50%);
+
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     font-family: "Instrument Sans", sans-serif;
-    font-size: .8rem;
-    font-weight: 500;
     color: #ffffff;
     text-align: center;
+}
 
+/* Smaller text */
+.bar-label .vs,
+.bar-label .date {
+    font-size: 0.65rem;
+    opacity: 0.8;
+}
+
+/* Bigger opponent text */
+.bar-label .opp {
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 /* Transitions the bars starting at 0pct height */

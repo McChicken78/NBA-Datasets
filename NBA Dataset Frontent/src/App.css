@@ -6,16 +6,16 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 6rem;
+  padding: 1.5rem;
   will-change: filter;
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2rem #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2rem #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -34,7 +34,7 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 0rem;
 }
 
 .read-the-docs {
@@ -45,17 +45,56 @@
 .players-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0rem;
+  align-items: start;
 }
 
 @media (max-width: 900px) {
-  .player-grid {
+  .players-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .player-grid {
+  .players-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #1B3C53, #427ba7); /* subtle gradient */
+  color: #fff;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: 1px;
+}
+
+.app-header p {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  color: #e0e0e0;
+}
+
+.header-line {
+  width: 80%;
+  height: 3px;
+  background-color: #b4cfe3;
+  border-radius: 2px;
+  margin: 0.5rem 0;
 }
