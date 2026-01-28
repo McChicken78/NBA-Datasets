@@ -10,6 +10,7 @@
     width: 100%;
     transform: scale(.86);
     transform-origin: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);    
 }
 
 /* ------- PLAYER NAME SECTION ----------- */
