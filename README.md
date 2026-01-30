@@ -77,11 +77,11 @@
 
 # Demo
 ## Image of the graphical user interface (GUI)
-![App Page screenshot](/NBA-Datasets/global%20assets/App%20start%20screen.png)
+![App Page screenshot](/NBA-Datasets/globalassets/Appstartscreen.png)
 ## CSV files of post-processed data
-![NBA Dataset CSV](/NBA-Datasets/global%20assets/NBA%20Dataset%20CSV.png)
+![NBA Dataset CSV](/NBA-Datasets/globalassets/NBADatasetCSV.png)
 ## This demo is to show the current state of the project, including both the web application and the REST API data.
-![App and API Demo](/NBA-Datasets/global%20assets/NBA%20Dataset%20Example%20-%20GIfFinal.gif)
+![App and API Demo](/NBA-Datasets/globalassets/NBADatasetExampleGIfFinal.gif)
 
 
 # Future Features
