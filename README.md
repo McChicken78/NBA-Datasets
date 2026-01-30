@@ -77,9 +77,9 @@
 
 # Demo
 ## Image of the graphical user interface (GUI)
-![App Page screenshot](/NBA-Datasets/globalassets/Appstartscreen.png)
+<img src = "Appstartscreen.png">
 ## CSV files of post-processed data
-![NBA Dataset CSV](/NBA-Datasets/globalassets/NBADatasetCSV.png)
+<img src = "NBADatasetCSV.png">
 
 ## To access the demo video navigate to the following directory:
     globalassets -> NBADatasetExampleGIfFinal.gif
