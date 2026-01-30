@@ -80,8 +80,10 @@
 ![App Page screenshot](/NBA-Datasets/globalassets/Appstartscreen.png)
 ## CSV files of post-processed data
 ![NBA Dataset CSV](/NBA-Datasets/globalassets/NBADatasetCSV.png)
-## This demo is to show the current state of the project, including both the web application and the REST API data.
-![App and API Demo](/NBA-Datasets/globalassets/NBADatasetExampleGIfFinal.gif)
+
+## To access the demo video navigate to the following directory:
+    globalassets -> NBADatasetExampleGIfFinal.gif
+
 
 
 # Future Features
