@@ -75,8 +75,6 @@
 
     <img src = "Player Card Mockup.png" width = "400" height = "500">
 
-## Future Additions
-#### Going forward I plan to add the ability to filter through players based on teams. I also want to increase the number of players per team to include all starting 5's as well as the 6 man to get a better image of team trends.
 # Demo
 ## Image of the graphical user interface (GUI)
 ![App Page screenshot](/NBA-Datasets/global%20assets/App%20start%20screen.png)
