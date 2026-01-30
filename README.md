@@ -82,7 +82,7 @@
 <img src = "NBADatasetCSV.png">
 
 ## To access the demo video navigate to the following directory:
-    globalassets -> NBADatasetExampleGIfFinal.gif
+    Demo -> DemoVideo.gif
 
 
 
