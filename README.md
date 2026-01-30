@@ -9,7 +9,7 @@
 * React for dynamic, interactive UI components
 * CSS for styling 
 * HTML for webpage structuring
-### This is a small but full-stack web application designed to create easy to read recent stats on specific players. Similar to a few betting apps like fanduel, this software is meant to act as a helper for users to recieve quick and readable data on the trends of players in there last X games. 
+### This is a small but full-stack web application designed to create easy to read recent stats on specific players. Similar to a few betting apps like FanDuel, this software is meant to act as a helper for users to receive quick and readable data on the trends of players in their last X games.
 
 ## Programming languages Purpose
 * Python Jupyter Notebook -> Data Processing, analysis, and preparation of data
