@@ -39,7 +39,8 @@ function PlayerCard({ player, img }) {
                         <div className='avg-label'>Avg: { average }</div>
                     </div>     
 
-                    {data.map((value, index) => {
+                    {[...data].reverse().map((value, index) => {
+                    const game = player.Games[player.Games.length - 1 - index]
                     const percent = (value / max) * 100
                     console.log(averagePct * max / 100)
                     const barShort = percent < 15
@@ -53,8 +54,8 @@ function PlayerCard({ player, img }) {
                         />
                         <div className="bar-label">
                             <span className="vs">vs</span>
-                            <span className="opp">{player.Games[index]?.Opp}</span>
-                            <span className="date">{formatDate(player.Games[index]?.Date)}</span>
+                            <span className="opp">{game?.Opp}</span>
+                            <span className="date">{formatDate(game?.Date)}</span>
                             </div>
                         </li>
                     )
